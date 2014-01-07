@@ -121,6 +121,7 @@ BOARD_SEPOLICY_UNION += \
        time.te \
        ueventd.te \
        vss.te \
+       wpa.te \
        file_contexts \
        genfs_contexts \
        te_macros

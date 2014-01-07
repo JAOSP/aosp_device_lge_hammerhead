@@ -1,0 +1,2 @@
+# Reading from /persist/wifi/.macaddr
+r_dir_perms(wpa, persist_wifi_file)
