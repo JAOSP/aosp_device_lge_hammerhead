@@ -24,6 +24,11 @@ allow sensors apk_data_file:dir { add_name write };
 # Socket can be deleted. So might have to keep in order to work.
 allow sensors apk_data_file:dir remove_name;
 
+# The socket seems to be mislabeled on some devices.
+# Allow access but log it.
+allow sensors apk_data_file:sock_file create_file_perms;
+auditallow sensors apk_data_file:sock_file create_file_perms;
+
 # Create directories and files under /data/misc/sensors
 # and /data/system/sensors. Allow generic r/w file access.
 allow sensors sensors_data_file:dir create_dir_perms;

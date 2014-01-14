@@ -8,6 +8,11 @@ unix_socket_send(system_server, sensors, sensors)
 allow system_server sensors:unix_stream_socket sendto;
 allow system_server sensors_socket:sock_file r_file_perms;
 
+# The socket seems to be mislabeled on some devices.
+# Allow access but log it.
+allow system_server apk_data_file:sock_file rw_file_perms;
+auditallow system_server apk_data_file:sock_file rw_file_perms;
+
 # mpdecision socket access
 unix_socket_connect(system_server, mpdecision, mpdecision)
 unix_socket_send(system_server, mpdecision, mpdecision)

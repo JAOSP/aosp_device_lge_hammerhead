@@ -28,6 +28,11 @@ allow camera camera_data_file:file create_file_perms;
 unix_socket_connect(camera, sensors, sensors)
 allow camera sensors_socket:sock_file read;
 
+# The socket seems to be mislabeled on some devices.
+# Allow access but log it.
+allow camera apk_data_file:sock_file { read write };
+auditallow camera apk_data_file:sock_file { read write };
+
 allow camera sensors_device:chr_file rw_file_perms;
 
 # Read camera files from persist filesystem
