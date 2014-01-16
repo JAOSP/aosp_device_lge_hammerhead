@@ -23,6 +23,8 @@ allow sensors sensors_socket:sock_file create_file_perms;
 allow sensors apk_data_file:dir { add_name write };
 # Socket can be deleted. So might have to keep in order to work.
 allow sensors apk_data_file:dir remove_name;
+# Allow deleting old socket files from prior boots before this policy.
+allow sensors apk_data_file:sock_file unlink;
 
 # Create directories and files under /data/misc/sensors
 # and /data/system/sensors. Allow generic r/w file access.
