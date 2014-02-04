@@ -43,6 +43,24 @@
 # shared memory drivers
 /dev/smdcntl[0-7]                      u:object_r:radio_device:s0
 
+# subsystem_ramdump related device nodes
+/dev/ramdump_adsp                   u:object_r:ramdump_device:s0
+/dev/ramdump_dsps                   u:object_r:ramdump_device:s0
+/dev/ramdump_gss                    u:object_r:ramdump_device:s0
+/dev/ramdump_lpass                  u:object_r:ramdump_device:s0
+/dev/ramdump_modem                  u:object_r:ramdump_device:s0
+/dev/ramdump_modem_fw               u:object_r:ramdump_device:s0
+/dev/ramdump_modem_sw               u:object_r:ramdump_device:s0
+/dev/ramdump_venus                  u:object_r:ramdump_device:s0
+/dev/ramdump_riva                   u:object_r:ramdump_device:s0
+/dev/ramdump_smem-dsps              u:object_r:ramdump_device:s0
+/dev/ramdump_smem-gss               u:object_r:ramdump_device:s0
+/dev/ramdump_smem-modem             u:object_r:ramdump_device:s0
+/dev/ramdump_pronto                 u:object_r:ramdump_device:s0
+/dev/ramdump_smem                   u:object_r:ramdump_device:s0
+/dev/ramdump_smem-smd               u:object_r:ramdump_device:s0
+/dev/ramdump_audio-ocmem            u:object_r:ramdump_device:s0
+
 # Default label for shared memory drivers
 /dev/smd([0-9])+                       u:object_r:smd_device:s0
 /dev/smem_log                          u:object_r:shared_log_device:s0
@@ -87,6 +105,7 @@
 /data/misc/playready(/.*)?         u:object_r:drm_data_file:s0
 /data/fdAlbum                      u:object_r:camera_data_file:s0
 /data/system/time(/.*)?            u:object_r:time_data_file:s0
+/data/tombstones/ramdump(/.*)?     u:object_r:ramdump_data_file:s0
 
 # rmt_storage is a qualcomm specific daemon responsible
 # for servicing modem filesystem requests.
