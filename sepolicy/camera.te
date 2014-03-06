@@ -27,6 +27,8 @@ allow camera camera_data_file:file create_file_perms;
 # Connect to sensor socket (/data/app/sensor_ctl_socket)
 unix_socket_connect(camera, sensors, sensors)
 allow camera sensors_socket:sock_file read;
+# /data/app/sensor_ctl_socket moved to /dev/socket/sensor_ctl_socket
+allow camera socket_device:dir r_dir_perms;
 
 allow camera sensors_device:chr_file rw_file_perms;
 
