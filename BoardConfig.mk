@@ -106,6 +106,7 @@ BOARD_SEPOLICY_UNION += \
        device.te \
        domain.te \
        file.te \
+       hostapd.te \
        irsc_util.te \
        mediaserver.te \
        mpdecision.te \
@@ -124,7 +125,7 @@ BOARD_SEPOLICY_UNION += \
        time.te \
        ueventd.te \
        vss.te \
-       wpa.te \
+       wpa_supplicant.te \
        file_contexts \
        genfs_contexts \
        te_macros
