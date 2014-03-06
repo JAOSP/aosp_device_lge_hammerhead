@@ -17,3 +17,6 @@ allow system_server mpdecision_socket:dir search;
 allow system_server self:netlink_socket create_socket_perms;
 
 allow system_server rtc:chr_file rw_file_perms;
+
+# AMS access to /dev/mdm
+allow system_server radio_device:chr_file r_file_perms;
