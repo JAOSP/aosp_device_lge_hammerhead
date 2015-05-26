@@ -34,9 +34,9 @@ install_blobs() {
     done
 }
 
-MAGURO_BLOBS="broadcom-hammerhead-lrx21o-01fad5db.tgz
-              lge-hammerhead-lrx21o-c6cf4582.tgz
-              qcom-hammerhead-lrx21o-e0cd4949.tgz"
+MAGURO_BLOBS="broadcom-hammerhead-lmy48b-2d0a908d.tgz
+              lge-hammerhead-lmy48b-92cca4b9.tgz
+              qcom-hammerhead-lmy48b-021b52eb.tgz"
 
 CSUM_LIST="$PWD/blob-shasums"
 
