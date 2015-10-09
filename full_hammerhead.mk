@@ -23,6 +23,8 @@ PRODUCT_COPY_FILES := device/lge/hammerhead/apns-full-conf.xml:system/etc/apns-c
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=hammerhead TARGET_DEVICE=hammerhead BUILD_FINGERPRINT=google/hammerhead/hammerhead:6.0/MRA58K/2256973:user/release-keys PRIVATE_BUILD_DESC="hammerhead-user 6.0 MRA58K 2256973 release-keys"
+
 PRODUCT_NAME := full_hammerhead
 PRODUCT_DEVICE := hammerhead
 PRODUCT_BRAND := google
