@@ -260,3 +260,4 @@
 /system/media/audio/ui/VideoStop.ogg
 /system/media/audio/ui/audio_end.ogg
 /system/media/audio/ui/audio_initiate.ogg
+/system/xbin/wlutil

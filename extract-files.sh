@@ -4,13 +4,13 @@ VENDOR=lge
 DEVICE=hammerhead
 
 echo "Please wait..."
-wget -nc -q https://dl.google.com/dl/android/aosp/hammerhead-mra58n-factory-aeca4139.tgz
-tar zxf hammerhead-mra58n-factory-aeca4139.tgz
-rm hammerhead-mra58n-factory-aeca4139.tgz
-cd hammerhead-mra58n
-unzip image-hammerhead-mra58n.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/hammerhead-mmb29s-factory-6bfcdfa4.tgz
+tar zxf hammerhead-mmb29s-factory-6bfcdfa4.tgz
+rm hammerhead-mmb29s-factory-6bfcdfa4.tgz
+cd hammerhead-mmb29s
+unzip image-hammerhead-mmb29s.zip
 cd ../
-./simg2img hammerhead-mra58n/system.img system.ext4.img
+./simg2img hammerhead-mmb29s/system.img system.ext4.img
 mkdir system
 sudo mount -o loop -t ext4 system.ext4.img system
 
@@ -22,7 +22,6 @@ for FILE in `cat proprietary-blobs.txt | grep -v ^# | grep -v ^$ | sed -e 's#^/s
     if [ ! -d $BASE/$DIR ]; then
         mkdir -p $BASE/$DIR
     fi
-    echo "cp $FILE $BASE/$FILE"
     cp system/$FILE $BASE/$FILE
 
 done
@@ -31,5 +30,5 @@ done
 
 sudo umount system
 rm -rf system
-rm -rf hammerhead-mra58n
+rm -rf hammerhead-mmb29s
 rm system.ext4.img
