@@ -4,13 +4,13 @@ VENDOR=lge
 DEVICE=hammerhead
 
 echo "Please wait..."
-wget -nc -q https://dl.google.com/dl/android/aosp/hammerhead-mmb29s-factory-6bfcdfa4.tgz
-tar zxf hammerhead-mmb29s-factory-6bfcdfa4.tgz
-rm hammerhead-mmb29s-factory-6bfcdfa4.tgz
-cd hammerhead-mmb29s
-unzip image-hammerhead-mmb29s.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/hammerhead-mmb29x-factory-c6109f15.tgz
+tar zxf hammerhead-mmb29x-factory-c6109f15.tgz
+rm hammerhead-mmb29x-factory-c6109f15.tgz
+cd hammerhead-mmb29x
+unzip image-hammerhead-mmb29x.zip
 cd ../
-./simg2img hammerhead-mmb29s/system.img system.ext4.img
+./simg2img hammerhead-mmb29x/system.img system.ext4.img
 mkdir system
 sudo mount -o loop -t ext4 system.ext4.img system
 
@@ -30,5 +30,5 @@ done
 
 sudo umount system
 rm -rf system
-rm -rf hammerhead-mmb29s
+rm -rf hammerhead-mmb29x
 rm system.ext4.img
